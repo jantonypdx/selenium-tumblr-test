@@ -41,8 +41,8 @@ public class SimpleMain {
 
 		// adding new posts
 		dashboardPage.addNewText("Some Title", "Some Text");
-		//dashboardPage.addNewQuote("Now is the time for all good men...", "anonymous");
-		//dashboardPage.addNewLink("http://www.google.com");		
+		dashboardPage.addNewQuote("Now is the time for all good men...", "anonymous");
+		dashboardPage.addNewLink("http://www.google.com");		
 	
 		System.out.println("number of posts: " + dashboardPage.countPosts());
 		
