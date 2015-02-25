@@ -11,7 +11,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  * --------------------------
  * SimpleMain.java
  * --------------------------
- * (C)opyright 2015 by John Antony
+ * Copyright (c) 2015 John Antony
+ * This code is licensed under the terms of the MIT License
+ * see https://github.com/jantonypdx/selenium-tumblr-test/blob/master/license.txt
  * 
  * SimpleMain is a basic class with a static "main" function. This is used
  * to check the development of the Tumblr *Page classes. 

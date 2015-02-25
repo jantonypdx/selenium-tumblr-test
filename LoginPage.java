@@ -13,7 +13,9 @@ import org.openqa.selenium.support.ui.LoadableComponent;
  * --------------------------
  * LoginPage.java
  * --------------------------
- * (C)opyright 2015 by John Antony
+ * Copyright (c) 2015 John Antony
+ * This code is licensed under the terms of the MIT License
+ * see https://github.com/jantonypdx/selenium-tumblr-test/blob/master/license.txt
  * 
  * LoginPage handles Tumblr's login and logout functionality.
  * -------------------------- 

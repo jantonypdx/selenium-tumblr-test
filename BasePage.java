@@ -20,7 +20,9 @@ import com.google.common.base.Predicate;
  * --------------------------
  * BasePage.java
  * --------------------------
- * (C)opyright 2015 by John Antony
+ * Copyright (c) 2015 John Antony
+ * This code is licensed under the terms of the MIT License
+ * see https://github.com/jantonypdx/selenium-tumblr-test/blob/master/license.txt
  * 
  * This is a base class for Selenium web pages that both extends LoadableComponent 
  * and handles repetitive functions. This BasePage class has page URL and page title
@@ -205,7 +207,6 @@ public class BasePage<T extends BasePage<T>>  extends LoadableComponent<T> {
 			catch (TimeoutException timeoutException) {
 
 			}			
-			
 			
 		// handle any alerts if they pop up
 		} catch (org.openqa.selenium.UnhandledAlertException unhandledAlertException) {
