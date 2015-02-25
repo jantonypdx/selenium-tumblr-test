@@ -1,6 +1,6 @@
 # selenium-tumblr-test 
 
-##Synopsis
+##Description
 
 Selenium Tumblr Tests is a set of java classes to test Tumblr functionality. Tumblr functionality is implemented with Selenium PageObjects classes. Each PageObject class represents functionality of a particular Tumblr page (e.g. Login/Logout, Dashboard, etc.) 
 
@@ -24,15 +24,22 @@ DashboardPage.java: Selenium PageObject representing Tumblr dashboard functional
 README.md:          this file
 ```
 
+## Motivation
+
+The reason for developing this was to learn more about using Selenium to test a real-world use case. Tumblr is a simple, but dynamically updated website. Not only do you have to account for the actions of buttons and fields, but also dynamic information that is updated on the page.
+
+In doing so, I learned more about the design advantages of:
+```
+BaseObject:        http://elementalselenium.com/tips/9-use-a-base-page-object
+PageObjects:       https://code.google.com/p/selenium/wiki/PageObjects
+LoadableComponent: https://code.google.com/p/selenium/wiki/LoadableComponent
+
+```
+
 ## Code Example
 
 TO-DO:
 Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
-
-## Motivation
-
-TO-DO:
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
 
 ## Installation
 
