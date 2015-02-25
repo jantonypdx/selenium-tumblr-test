@@ -29,17 +29,34 @@ README.md:          this file
 The reason for developing this was to learn more about using Selenium to test a real-world use case. Tumblr is a simple, but dynamically updated website. Not only do you have to account for the actions of buttons and fields, but also dynamic information that is updated on the page.
 
 In doing so, I learned more about the design advantages of:
-```
-BaseObject:        http://elementalselenium.com/tips/9-use-a-base-page-object
-PageObjects:       https://code.google.com/p/selenium/wiki/PageObjects
-LoadableComponent: https://code.google.com/p/selenium/wiki/LoadableComponent
 
-```
+BaseObject: http://elementalselenium.com/tips/9-use-a-base-page-object<br/>
+The BaseObject encapsulates much of the functionality and utility functions needed to interact with the website. The subsequent derived object, LoginPage and DashboardPage, are then fairly trivial to implement. Beyond the constructor, they only contain fields and function to perform operations.
+
+PageObjects: https://code.google.com/p/selenium/wiki/PageObjects<br/>
+PageObjects are a way to model how you interact with a website. By encapsulationg functionality into objects, you contain all interaction to one location. If functionality changes, you need only update it in one place.
+
+LoadableComponent: https://code.google.com/p/selenium/wiki/LoadableComponent<br/>
+LoadComponent is a class ensuring that each page object is loaded in a similar way. By extending this in your page objects, you ensure similar functionality, plus the ability to chain navigation between pages together. The results in a great reduction of code in both your page objects and your tests.
 
 ## Code Example
 
-TO-DO:
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+Given that pages are ultimately derived from LoadableComponent, page objects can be chained together by passing them into the constructor of the next page object. All page navigation can then be trigged by calling a simple "get()" call on the last object as follows. Additionally, cleanup is a simple call to the login page.
+```
+// create webdriver and pages		
+WebDriver driver = new FirefoxDriver();		
+LoginPage loginPage = new LoginPage(driver, null, username, password);
+DashboardPage dashboardPage = new DashboardPage(driver, loginPage);
+dashboardPage.get();
+
+// call any dashboard functions here
+dashboardPage.addNewText("Some Title", "Some Text");
+
+// cleanup
+loginPage.logout();
+```
+
+
 
 ## Installation
 
