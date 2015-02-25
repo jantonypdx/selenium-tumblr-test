@@ -75,4 +75,4 @@ loginPage.logout();
 
 ## License
 
-Copyright (c) 2015 John Antony. Code released under [the MIT license](https://github.com/jantonypdx/selenium-tumblr-test/license.txt).
+Copyright (c) 2015 John Antony. Code released under [the MIT license](https://github.com/jantonypdx/selenium-tumblr-test/blob/master/license.txt).
