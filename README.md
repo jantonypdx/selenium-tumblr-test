@@ -1,6 +1,6 @@
 # selenium-tumblr-test 
 
-## Table of contents
+## Table of Contents
 
 - [Description](#description)
 - [Motivation](#motivation)
@@ -35,7 +35,7 @@ README.md:          this file
 
 ## Motivation
 
-The reason for developing this was to learn more about using Selenium to test a real-world use case. Tumblr is a simple, but dynamically updated website. Not only do you have to account for the actions of buttons and fields, but also dynamic information that is updated on the page. In doing so, I learned more about the design advantages of:
+The reason for developing this was to learn more about using Selenium to test a real-world use case. Tumblr is a simple, but dynamically updated website. Not only do you need to account for the actions of buttons and fields, but also information on the page that is dynamically updated. In doing so, I learned more about the design advantages of:
 
 BaseObject: http://elementalselenium.com/tips/9-use-a-base-page-object<br/>
 The BaseObject encapsulates utility functions and functionality common to each page object needed to interact with the website. The subsequent derived objects, LoginPage and DashboardPage, are then fairly trivial to implement. Beyond the constructor, they only contain fields and function operations.
@@ -51,7 +51,7 @@ The BasePage contains utilities that wait for elements to be visible, elements t
 
 ## Code Example
 
-Given that pages are ultimately derived from LoadableComponent, page objects can be chained together by passing them into the constructor of the next page object. All page navigation can then be trigged by calling a simple "get()" call to the last object (as shown below). Navigation exit is then a simple call to the login page object.
+Given that pages are ultimately derived from LoadableComponent, page objects can be chained together by passing them into the constructor of the next page object. All page navigation can then be trigged by calling a simple "get()" call to the final chained object (as shown below). Navigation exit is then handled with a simple call to the login page object.
 ```
 // create webdriver and pages		
 WebDriver driver = new FirefoxDriver();		
