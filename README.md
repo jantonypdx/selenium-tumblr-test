@@ -1,5 +1,7 @@
 # selenium-tumblr-test 
 
+![Selemium Tumblr Test logo](https://github.com/jantonypdx/selenium-tumblr-test/blob/master/Selenium%20Tumblr%20%28300x150%29.png)
+
 ## Table of Contents
 
 - [Description](#description)
