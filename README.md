@@ -37,13 +37,16 @@ README.md:          this file
 
 The reason for developing this was to learn more about using Selenium to test a real-world use case. Tumblr is a simple, but dynamically updated website. Not only do you need to account for the actions of buttons and fields, but also information on the page that is dynamically updated. In doing so, I learned more about the design advantages of:
 
-**BaseObject**: http://elementalselenium.com/tips/9-use-a-base-page-object<br/>
+**BaseObject**:<br/>
+See: <a href="http://elementalselenium.com/tips/9-use-a-base-page-object" title="Using a Base Page Object" target="_blank">Using a Base Page Object</a><br/>
 The BaseObject encapsulates utility functions and functionality common to each page object needed to interact with the website. The subsequent derived objects, LoginPage and DashboardPage, are then fairly trivial to implement. Beyond the constructor, they only contain fields and function operations.
 
-**PageObjects**: https://code.google.com/p/selenium/wiki/PageObjects<br/>
+**PageObjects**:<br/>
+See: <a href="https://code.google.com/p/selenium/wiki/PageObjects" title="Selenium PageObjects" target="_blank">Selenium PageObjects</a><br/>
 PageObjects are a way to model how you interact with a website. By encapsulating functionality into objects, you contain all interaction to one location. If the website's functionality later changes, you then only need to update it in one place.
 
-**LoadableComponent**: https://code.google.com/p/selenium/wiki/LoadableComponent<br/>
+**LoadableComponent**:<br/>
+See: <a href="https://code.google.com/p/selenium/wiki/LoadableComponent" title="Selenium Loadable Component" target="_blank">Selenium Loadable Component</a><br/>
 LoadableComponent is a class ensuring that each page object is loaded in a similar way. By extending this in your page objects, you ensure similar functionality on each page. You also gain the ability to chain together navigation events between the pages. This results in a great reduction of code in both your page objects and your tests.
 
 **Utilities**:<br/>
