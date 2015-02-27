@@ -11,6 +11,8 @@
 
 ##Description
 
+*see also blog post: [Using Selenium to Test Tumblr](http://www.johnantony.com/using-selenium-to-test-tumblr/)*
+
 Selenium Tumblr Tests is a set of java classes to test Tumblr functionality. The Tumblr functionality is implemented with Selenium PageObjects classes. Each PageObject class represents functionality of a particular Tumblr page (e.g. Login/Logout page, Dashboard page, etc.) 
 
 PageObject classes are derived from a BasePage class. The BasePage gives all derived classes access to utility functions useful for Tumblr. Additionally, the BasePage is derived from LoadableComponent which simplifies the derived classes and allows simple navigation between pages (i.e. via [LoadableComponent nested components](https://code.google.com/p/selenium/wiki/LoadableComponent#Advanced_Usage:_Nested_Components)).
